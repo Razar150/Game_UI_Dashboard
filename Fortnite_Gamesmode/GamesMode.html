@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/678a951586.js" crossorigin="anonymous"></script>
+  <style>
+
+    body{
+      background-color:rgb(20,20,20);
+      color: #f1f1f1;
+    }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color:rgb(20,20,20);
+    }
+
+    .nav-link{
+      padding-top: 44px;
+
+    }
+
+    .sidebar1{
+      padding-top: 17px;
+    }
+
+
+    .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto auto auto;
+  }
+
+    .bottom {
+    display: flex;
+    flex-direction: column;
+    margin: 271px auto auto auto;
+    align-items: center;
+  }
+
+  .icon{
+    font-size: 23px;
+    padding-right: 9px;
+    color: white;
+  }
+      .navbar-brand{
+      font-size: 25px;
+      padding-left: 51px; 
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 800;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #141414;
+      height: 100%;
+      width: 301px;
+    }
+    .aside_header {
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color:rgb(46,46,47);
+  }
+
+  .card-img-top{
+    height: 322px;
+    width: 237px;
+  }
+  .rounded{
+    background-color: yellowgreen;
+    border-radius: 5px;
+    padding: 4px;
+    color: rgb(20,20,20);
+  }
+
+
+    /* Set black background color, white text and some padding */
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+   
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="padding: 6px; font-size: 17px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">GamesMode</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav " style="padding-left: 472px;">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">Whishlist</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+        <li><a href="#"><i class="bi bi-bell-fill"></i></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav " style="height: 122vh;margin-top: 18px; border: 1px solid #322525;">
+      <div class="top">
+        <a href="#" class="nav-link align-middle px-0">
+          <i class="bi bi-house-door-fill icon"></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Home</span>
+     </a>
+      <a href="#" class="nav-link align-middle px-0">
+        <i class="bi bi-shop-window icon"  ></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Store</span>
+    </a>
+      <a href="#" class="nav-link align-middle px-0" style="padding-left: 7px;">
+        <i class="bi bi-grid-fill icon" ></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Library</span>
+     </a>
+      <a href="#" class="nav-link align-middle px-0" style="padding-left: 7px;">
+        <i class="fa-solid fa-user-group icon"></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Friends</span>
+     </a>
+     <a href="#" class="nav-link align-middle px-0" style="padding-right: 8px;">
+      <i class="bi bi-reception-4 icon"></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Live</span>
+   </a>
+    </div>
+      <div class="bottom">
+      <a href="#" class="nav-link align-middle px-0" style="    padding-left: 16px;">
+      <i class="bi bi-download icon"></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Downloads</span>
+    </a>
+       <a href="#" class="nav-link align-middle px-0">
+        <i class="bi bi-gear-fill icon"></i> <span class="ms-1 d-none d-sm-inline" style="color: white;">Settings</span>
+     </a> 
+      <a href="#" class="nav-link align-middle px-0">
+      <img src="assets/Assaisns creed.webp" alt="image not found" style="height: 27px; width: 27px; border-radius: 50%;"></i> <span class="ms-1 d-none d-sm-inline" style="padding-left: 8px; color:white;">Rakshith</span>
+    </a>
+      </div>
+    </div>
+    <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-10">
+            <div class="panel panel-default text-left" style="margin-top: 54px; background-color:rgb(20,20,20); border-color:rgb(20,20,20);">
+              <div class="bg-img" style="background-image: url('./assets/Fortnite.jpg');  height:60vh; margin-right: 26px;
+              margin-left: 24px; opacity: 89%;">
+                <h2 class="h2 " style=" padding: 13px;">Fortnite </h2>
+                <br>
+                <br>
+                <div class="text"  style=" padding-top: 256px;padding-left: 32px;color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >
+                <p>Update</p>
+                <h2 class="h2"> The Hunt is on in Fortnite Chapter 2- </h2>
+                <h2 class="h2">Season 5 Zero Point. </h2>
+                <button type="button" class="btn btn-default btn-primary " style="background-color: #3100f7; padding: 15px; ">
+                   Play For Free
+                </button>  
+              </div>   
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-2 well" style=" margin-top: 75px; margin-left:-6px;background-color:rgb(46,46,47);border:1px solid rgb(62, 44, 44);border-radius: 11px;">
+          <div class="games">
+            <div class="aside_header">
+              <span><img src="assets/fortnite1.jpg" alt="Image no found"  style="border-radius: 15%;     height: 49px;
+                width: 49px;"></span>
+              <span style="padding-right:110px;">Fortnite</span>
+            </div>
+            <div class="aside_header">
+              <span><img src="assets/rocket.jpg" alt="Image no found"  style="border-radius: 15%;     height: 49px;
+                width: 49px;"></span>
+              <span style="padding-right:65px;">Rocket League</span>
+            </div>
+            <div class="aside_header">
+              <span><img src="assets/escape.avif" alt="Image no found"  style="border-radius: 15%;     height: 49px;
+                width: 49px;"></span>
+              <span style="padding-right: 65px;">The Escapist 2</span>
+            </div>
+            <div class="aside_header">
+              <span><img src="assets/long dark.jpg" alt="Image no found"  style="border-radius: 15%;     height: 49px;
+                width: 49px;"></span>
+              <span style="padding-right: 65px;">The Long Dark</span>
+            </div>
+            <div class="aside_header">
+              <span><img src="assets/yakuza.jpg" alt="Image no found"  style="border-radius: 15%;     height: 49px;
+                width: 49px;"></span>
+              <span style="padding-right: 112px;">Yakuza</span>
+            </div>
+            <div class="aside_header">
+              <span><img src="assets/warhammer.avif" alt="Image no found"  style="border-radius: 15%;     height: 49px;
+                width: 49px;"></span>
+            <span style="padding-right: 11px;">Warhammer:Vermintide2</span>
+            </div>
+          </div>      
+          </div>
+        </div>
+        </div> 
+
+        <div class="col-sm-10" style="padding:18px">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="sales">
+              <h3 style="float:left;">Games on Sales</h3>
+            </div>
+          </div>
+              <div class="col-sm-6" style="font-size: 24px; margin: -5px;">
+                <div class="sales" style="float:right; padding-top:26px;  padding-right: 14px;">
+              <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+              <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-sm-10">
+          <div class="row text-left">
+          <div class="col-sm-2 ">
+            <div class="card">
+              <img src="assets/valheim.webp" class="card-img-top" alt="..."  >
+              <div class="card-body">
+                <h5 class="card-title">Valheim</h5>
+                <p class="card-text">Action Games</p>
+                <p>$8.15</p>
+              </div>
+            </div>
+            </div>
+
+            <div class="col-sm-2 ">
+              <div class="card ">
+                <img src="assets/bioshock.jpg" class="card-img-top" alt="..."  >
+                <div class="card-body">
+                  <h5 class="card-title">BIOSHOCK:THE COLLECTION</h5>
+                  <p class="card-text">Action, RPG</p>
+                  <span class="rounded">-80%</span>
+                  <span><s>$50</s></span>
+                  <span style="padding: 17px;">$8.67</span>
+                </div>
+              </div>
+              </div>
+
+              <div class="col-sm-2 ">
+                <div class="card ">
+                  <img src="assets/unravel.jpg" class="card-img-top" alt="..." >
+                  <div class="card-body">
+                    <h5 class="card-title">Unravel 2</h5>
+                    <p class="card-text">Adventure Game</p>
+                    <p>$20</p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="col-sm-2 ">
+                  <div class="card ">
+                    <img src="assets/tick tock.webp" class="card-img-top" alt="..." >
+                    <div class="card-body">
+                      <h5 class="card-title">Tick Tock:A Tail for two</h5>
+                      <p class="card-text">Indie Game</p>
+                      <span class="rounded">-60%</span>
+                      <span><s>$3.47</s></span>
+                      <span style="padding: 17px;">$1.39</span>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col-sm-2 ">
+                    <div class="card ">
+                      <img src="assets/hitman3.jpg" class="card-img-top" alt="..." >
+                      <div class="card-body">
+                        <h5 class="card-title">HITMAN:3</h5>
+                        <p class="card-text">Action Game</p>
+                        <p>$6.30</p>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="col-sm-2 ">
+                      <div class="card ">
+                        <img src="assets/Assaisns creed.webp" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                          <h5 class="card-title">Assasins Creed Unity</h5>
+                          <p class="card-text">Action, Adventure Game </p>
+                          <p>$10.5</p>
+                        </div>
+                      </div>
+                      </div>
+            
+          </div>     
+        </div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
